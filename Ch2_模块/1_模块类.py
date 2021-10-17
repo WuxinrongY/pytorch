@@ -6,6 +6,7 @@ import torch.nn as nn
 模块本身是一个类nn.Module
 torch的模型通过继承该类，在类的内部定义模块的实例化，通过前向计算调用模块，最后实现深度学习模型的搭建。
     1.1 简单线性回归类
+    1.2 模块函数的使用
 """
 
 class ModelTest(nn.Module):
@@ -41,6 +42,15 @@ T = torch.randn(2,2)
 print(T.dtype)
 print(T1.dtype)
 print(model(T1))
+Pa = list(model.named_parameters())
+print(Pa)
+# 转换模型参数为半精度浮点数
+model.half()
+Pa = list(model.named_parameters())
+print(Pa)
+# model.cuda() 将模型转移到cuda上
+
+
 
 
     
