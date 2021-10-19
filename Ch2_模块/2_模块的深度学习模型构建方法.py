@@ -9,14 +9,6 @@ from collections import OrderedDict
     下述为4中Module的继承模式，可以进行深度学习模型的搭建。
 """
 
-
-
-
-
-
-
-
-
 """
 class Module(object):
     def __init__(self):
