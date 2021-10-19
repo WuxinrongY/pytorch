@@ -33,22 +33,25 @@ class LineraModel(nn.Module):
         # y = wx+b
         return x.mm(self.weight)+self.bias
 
-model = LineraModel(2)
-"""
-此处出现报错，原因，当将python数组转换为tensor时，1x2为二维数组，而2为一维数组，因此，需要[[1,2]]才能表示1x2的数组
-"""
-T1 = torch.tensor([[1,2]],dtype=torch.float)
-T = torch.randn(2,2)
-print(T.dtype)
-print(T1.dtype)
-print(model(T1))
-Pa = list(model.named_parameters())
-print(Pa)
-# 转换模型参数为半精度浮点数
-model.half()
-Pa = list(model.named_parameters())
-print(Pa)
-# model.cuda() 将模型转移到cuda上
+
+if __name__=='__main__':
+
+    model = LineraModel(2)
+    """ 
+    此处出现报错，原因，当将python数组转换为tensor时，1x2为二维数组，而2为一维数组，因此，需要[[1,2]]才能表示1x2的数组
+    """
+    T1 = torch.tensor([[1,2]],dtype=torch.float)
+    T = torch.randn(2,2)
+    print(T.dtype)
+    print(T1.dtype)
+    print(model(T1))
+    Pa = list(model.named_parameters())
+    print(Pa)
+    # 转换模型参数为半精度浮点数
+    model.half()
+    Pa = list(model.named_parameters())
+    print(Pa)
+    # model.cuda() 将模型转移到cuda上
 
 
 
