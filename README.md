@@ -4,7 +4,7 @@
 >作者：wxr
 
 ## Ch0 概述
-## Ch1 (torch基础知识)[https://github.com/WuxinrongY/pytorch-/blob/main/Ch1_%E5%BC%A0%E9%87%8F/1_python%E5%88%97%E8%A1%A8%E5%92%8CNumpy%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BAtorch%E5%BC%A0%E9%87%8F.py]
+## Ch1 [torch基础知识](https://github.com/WuxinrongY/pytorch-/blob/main/Ch1_%E5%BC%A0%E9%87%8F/1_python%E5%88%97%E8%A1%A8%E5%92%8CNumpy%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BAtorch%E5%BC%A0%E9%87%8F.py)
 #### 1 python列表和Numpy数组转换为torch张量
 #### 2 创建张量
 #### 3 张量的存储设备
